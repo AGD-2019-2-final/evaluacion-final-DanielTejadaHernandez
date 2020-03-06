@@ -33,3 +33,6 @@ u = LOAD 'data.csv' USING PigStorage(',')
 --
 -- >>> Escriba su respuesta a partir de este punto <<<
 --
+x= FOREACH u GENERATE surname;
+y= FILTER x BY ($0 >= 'D') AND ($0< 'L');
+STORE y INTO 'output';
