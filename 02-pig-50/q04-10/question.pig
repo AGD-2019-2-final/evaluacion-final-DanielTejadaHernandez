@@ -27,3 +27,12 @@ fs -rm -f -r output;
 -- 
 --  >>> Escriba su respuesta a partir de este punto <<<
 -- 
+x = LOAD 'truck_event_text_partition.csv' USING PigStorage(',')
+    AS (f1:INT,
+	f2:INT,
+	f3:CHARARRAY);
+y = LIMIT x 10;
+z = ORDER y BY f1,f2,f3;
+STORE z INTO 'output' USING PigStorage (',');
+
+
