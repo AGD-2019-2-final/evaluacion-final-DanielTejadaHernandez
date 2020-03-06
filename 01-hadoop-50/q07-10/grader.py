@@ -2,7 +2,7 @@
 #! /usr/local/bin/python3
 r"""Test cases
 >>> run_answer() # doctest: +NORMALIZE_WHITESPACE
-A   1990-07-22   0	
+A   1990-07-22   0
 A   1990-09-26   8	
 A   1992-09-19   9	
 A   1990-10-06   10	
